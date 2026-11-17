@@ -2,7 +2,7 @@ cat << 'EOF' > src/main/webapp/index.jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <%
-    List> products = new ArrayList<>();
+    List> products = new ArrayList();
 
     String[][] catalogData = {
         {"101", "Apple iPhone 16 (128 GB) - Ultramarine", "Mobiles", "79900", "89900", "4.6", "14,230", "Free Delivery by Tomorrow", "https://placehold.co/300x300/f8fafc/1e293b?text=iPhone+16"},
