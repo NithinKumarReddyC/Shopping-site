@@ -14,6 +14,10 @@
         {"106", "Allen Solly Men's Regular Fit Cotton Polo T-Shirt", "Fashion", "699", "1199", "4.1", "22,450", "Top Deal", "https://placehold.co/600x420/f1f5f9/0f172a?text=Polo+T-Shirt", "Cotton blend • Regular fit • Casual wear", "👕"},
         {"107", "Philips Digital Air Fryer HD9252/90", "Appliances", "7999", "11995", "4.5", "9,870", "1 Year Warranty", "https://placehold.co/600x420/f1f5f9/0f172a?text=Philips+Air+Fryer", "4.1 L capacity • Rapid Air technology • Digital controls", "🍟"},
         {"108", "LG 260 L 3 Star Frost-Free Double Door Refrigerator", "Appliances", "24490", "31990", "4.4", "5,320", "Free Installation", "https://placehold.co/600x420/f1f5f9/0f172a?text=LG+Refrigerator", "260 L capacity • 3 Star rating • Frost-free • Double door", "🧊"}
+        ,{"109", "Wakefit 3-Seater Fabric Sofa", "Furniture", "24999", "34999", "4.4", "1,245", "Free Delivery • 3 Year Warranty", "https://placehold.co/600x420/f1f5f9/0f172a?text=3-Seater+Sofa", "3-seater • Fabric upholstery • Solid wood frame • Grey", "🛋️"}
+        ,{"110", "Queen Size Engineered Wood Bed with Storage", "Furniture", "18999", "27999", "4.2", "986", "Free Installation", "https://placehold.co/600x420/f1f5f9/0f172a?text=Queen+Bed", "Queen size • Hydraulic storage • Engineered wood • Walnut finish", "🛏️"}
+        ,{"111", "2-Door Wardrobe with Mirror", "Furniture", "12999", "19999", "4.1", "754", "Free Delivery", "https://placehold.co/600x420/f1f5f9/0f172a?text=2-Door+Wardrobe", "2 doors • Mirror • Hanging space • Engineered wood", "🚪"}
+        ,{"112", "Wooden Study Desk with Storage Shelves", "Furniture", "5499", "8499", "4.3", "1,108", "Easy Assembly", "https://placehold.co/600x420/f1f5f9/0f172a?text=Study+Desk", "Computer desk • Storage shelves • Engineered wood • Oak finish", "🪑"}
     };
 
     for (String[] item : catalogData) {
@@ -32,7 +36,7 @@
         products.add(p);
     }
 
-    String[] categories = {"All", "Mobiles", "Electronics", "Fashion", "Appliances"};
+    String[] categories = {"All", "Mobiles", "Electronics", "Fashion", "Appliances", "Furniture"};
     String serverTimestamp = new java.text.SimpleDateFormat("dd MMM yyyy, hh:mm a").format(new Date());
 %>
 <!DOCTYPE html>
@@ -122,7 +126,7 @@
         <select id="categorySelect" onchange="filterProducts()">
             <% for (String cat : categories) { %><option value="<%= cat %>"><%= cat %></option><% } %>
         </select>
-        <input type="text" id="searchInput" placeholder="Search mobiles, laptops, shoes..." oninput="filterProducts()">
+        <input type="text" id="searchInput" placeholder="Search mobiles, laptops, shoes, furniture..." oninput="filterProducts()">
         <button type="button" onclick="filterProducts()">Search 🔎</button>
     </div>
     <div class="nav-actions">
@@ -142,7 +146,7 @@
     <div>
         <span class="hero-tag">⚡ BIG SAVING DAYS</span>
         <h1>Good products.<br>Better prices.</h1>
-        <p>Discover trending tech, everyday essentials and deals worth adding to cart.</p>
+        <p>Discover trending tech, everyday essentials, stylish furniture and deals worth adding to cart.</p>
         <p style="margin-top:12px;font-weight:800;color:#ffdf91;">💳 No Cost EMI &nbsp; • &nbsp; 🚚 Delivery offers &nbsp; • &nbsp; 🔒 Secure demo checkout</p>
     </div>
     <div class="hero-art" aria-hidden="true">🛍️</div>
