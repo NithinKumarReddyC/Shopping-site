@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.util.*" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <%
-    // Server-side catalog data (can be replaced later with a JDBC/DAO database call)
-    List> products = new ArrayList<>();
-
-    String[][] catalogData = {
+    // Each row: {id, name, category, price, mrp, rating, reviews, badge, imageUrl}
+    String[][] products = {
         {"101", "Apple iPhone 16 (128 GB) - Ultramarine", "Mobiles", "79900", "89900", "4.6", "14,230", "Free Delivery by Tomorrow", "https://placehold.co/300x300/f8fafc/1e293b?text=iPhone+16"},
         {"102", "Samsung Galaxy S24 Ultra 5G (Titanium Gray, 256 GB)", "Mobiles", "119999", "134999", "4.7", "8,912", "Assured | Free Delivery", "https://placehold.co/300x300/f8fafc/1e293b?text=Galaxy+S24+Ultra"},
         {"103", "ASUS Vivobook 15, Intel Core i5-1335U, 16GB RAM, 512GB SSD", "Electronics", "54990", "69990", "4.3", "3,410", "No Cost EMI Available", "https://placehold.co/300x300/f8fafc/1e293b?text=ASUS+Vivobook+15"},
@@ -15,22 +14,8 @@
         {"108", "LG 260 L 3 Star Frost-Free Double Door Refrigerator", "Appliances", "24490", "31990", "4.4", "5,320", "Free Installation", "https://placehold.co/300x300/f8fafc/1e293b?text=LG+Refrigerator"}
     };
 
-    for (String[] item : catalogData) {
-        Map<String, String> p = new HashMap<>();
-        p.put("id", item[0]);
-        p.put("name", item[1]);
-        p.put("category", item[2]);
-        p.put("price", item[3]);
-        p.put("mrp", item[4]);
-        p.put("rating", item[5]);
-        p.put("reviews", item[6]);
-        p.put("badge", item[7]);
-        p.put("img", item[8]);
-        products.add(p);
-    }
-
     String[] categories = {"All", "Mobiles", "Electronics", "Fashion", "Appliances"};
-    String serverTimestamp = new java.text.SimpleDateFormat("dd MMM yyyy, hh:mm a").format(new Date());
+    String serverTimestamp = new SimpleDateFormat("dd MMM yyyy, hh:mm a").format(new Date());
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +27,7 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
         body { background-color: #eaeded; color: #0f1111; }
 
-        /* Top Navbar (Amazon/Flipkart Hybrid) */
+        /* Top Navbar */
         .navbar {
             background-color: #131921;
             color: #fff;
@@ -211,210 +196,8 @@
 
         <div class="search-bar">
             <select id="categorySelect" onchange="filterProducts()">
-                <% for (String cat : categories) { %>
-                    <option value="<%= cat %>"><%= cat %></option>
+                <% for (int i = 0; i < categories.length; i++) { %>
+                    <option value="<%= categories[i] %>"><%= categories[i] %></option>
                 <% } %>
             </select>
-            <input type="text" id="searchInput" placeholder="Search for Mobiles, Laptops, Shoes and more..." onkeyup="filterProducts()">
-            <button onclick="filterProducts()">Search</button>
-        </div>
-
-        <div class="nav-actions">
-            <div class="nav-item">
-                Hello, Nithin
-                <strong>Account &amp; Lists</strong>
-            </div>
-            <div class="nav-item">
-                Returns
-                <strong>&amp; Orders</strong>
-            </div>
-            <div class="cart-btn" onclick="toggleCart()">
-                Cart <span class="cart-count" id="cartCount">0</span>
-            </div>
-        </div>
-    </header>
-
-    <!-- Category Bar -->
-    <nav class="subnav" id="categoryTabs">
-        <% for (String cat : categories) { %>
-            <span class="<%= cat.equals("All") ? "active" : "" %>" onclick="selectCategory('<%= cat %>', this)"><%= cat %></span>
-        <% } %>
-    </nav>
-
-    <!-- Promotional Banner -->
-    <section class="hero">
-        <div>
-            <span class="hero-tag">BIG SAVING DAYS</span>
-            <h1>Up to 40% Off on Top Electronics &amp; Smartphones</h1>
-            <p>No Cost EMI | Instant 10% Bank Discount | Free Next-Day Delivery</p>
-        </div>
-        <div style="text-align: right; font-size: 13px; color: #cbd5e1;">
-            Server Node: <%= application.getServerInfo() %><br>
-            Loaded at: <%= serverTimestamp %>
-        </div>
-    </section>
-
-    <!-- Main Product Catalog -->
-    <main class="container">
-        <div class="section-header">
-            <h2 id="sectionTitle">Featured Deals (All Categories)</h2>
-            <span id="resultCount"><%= products.size() %> products available</span>
-        </div>
-
-        <div class="product-grid" id="productGrid">
-            <%
-                for (Map<String, String> p : products) {
-                    int price = Integer.parseInt(p.get("price"));
-                    int mrp = Integer.parseInt(p.get("mrp"));
-                    int discountPercent = (int) Math.round(((mrp - price) * 100.0) / mrp);
-            %>
-            <div class="card product-card" data-category="<%= p.get("category") %>" data-name="<%= p.get("name").toLowerCase() %>">
-                <div>
-                    <img src="<%= p.get("img") %>" alt="<%= p.get("name") %>">
-                    <div class="card-category"><%= p.get("category") %></div>
-                    <div class="card-title"><%= p.get("name") %></div>
-                    <div class="rating-row">
-                        <span class="rating-badge"><%= p.get("rating") %> &#9733;</span>
-                        <span>(<%= p.get("reviews") %>)</span>
-                    </div>
-                    <div class="price-row">
-                        <span class="price">&#8377;<%= String.format("%,d", price) %></span>
-                        <span class="mrp">&#8377;<%= String.format("%,d", mrp) %></span>
-                        <span class="discount"><%= discountPercent %>% off</span>
-                    </div>
-                    <div class="delivery-badge"><%= p.get("badge") %></div>
-                </div>
-                <div class="btn-group">
-                    <button class="btn-cart" onclick="addToCart('<%= p.get("id") %>', '<%= p.get("name").replace("'", "\\'") %>', <%= price %>)">Add to Cart</button>
-                    <button class="btn-buy" onclick="buyNow('<%= p.get("name").replace("'", "\\'") %>', <%= price %>)">Buy Now</button>
-                </div>
-            </div>
-            <% } %>
-        </div>
-    </main>
-
-    <!-- Slide-out Shopping Cart Drawer -->
-    <aside class="cart-drawer" id="cartDrawer">
-        <div class="cart-header">
-            <h3>Shopping Cart</h3>
-            <button onclick="toggleCart()" style="background:none; border:none; color:#fff; font-size:20px; cursor:pointer;">&times;</button>
-        </div>
-        <div class="cart-items" id="cartItemsList">
-            <p style="color:#666; text-align:center; margin-top:40px;">Your cart is empty.</p>
-        </div>
-        <div class="cart-footer">
-            <div style="display:flex; justify-content:space-between; font-weight:bold; font-size:16px;">
-                <span>Subtotal:</span>
-                <span id="cartTotal">&#8377;0</span>
-            </div>
-            <button class="checkout-btn" onclick="checkout()">Proceed to Buy</button>
-        </div>
-    </aside>
-
-    <footer>
-        &copy; 2026 ShopKart E-Commerce Pvt. Ltd. | Deployed on Apache Tomcat (JSP)
-    </footer>
-
-    <script>
-        let cart = [];
-
-        function selectCategory(category, element) {
-            document.getElementById("categorySelect").value = category;
-            document.querySelectorAll("#categoryTabs span").forEach(el => el.classList.remove("active"));
-            element.classList.add("active");
-            filterProducts();
-        }
-
-        function filterProducts() {
-            const selectedCat = document.getElementById("categorySelect").value;
-            const query = document.getElementById("searchInput").value.toLowerCase().trim();
-            const cards = document.querySelectorAll(".product-card");
-            let visibleCount = 0;
-
-            cards.forEach(card => {
-                const cat = card.getAttribute("data-category");
-                const name = card.getAttribute("data-name");
-                const matchesCat = (selectedCat === "All" || cat === selectedCat);
-                const matchesSearch = name.includes(query);
-
-                if (matchesCat && matchesSearch) {
-                    card.style.display = "flex";
-                    visibleCount++;
-                } else {
-                    card.style.display = "none";
-                }
-            });
-
-            document.getElementById("sectionTitle").innerText = "Featured Deals (" + selectedCat + ")";
-            document.getElementById("resultCount").innerText = visibleCount + " products available";
-        }
-
-        function addToCart(id, name, price) {
-            const existing = cart.find(item => item.id === id);
-            if (existing) {
-                existing.qty += 1;
-            } else {
-                cart.push({ id, name, price, qty: 1 });
-            }
-            renderCart();
-        }
-
-        function removeFromCart(id) {
-            cart = cart.filter(item => item.id !== id);
-            renderCart();
-        }
-
-        function renderCart() {
-            const list = document.getElementById("cartItemsList");
-            const countBadge = document.getElementById("cartCount");
-            const totalEl = document.getElementById("cartTotal");
-
-            let totalQty = 0;
-            let totalPrice = 0;
-
-            if (cart.length === 0) {
-                list.innerHTML = '<p style="color:#666; text-align:center; margin-top:40px;">Your cart is empty.</p>';
-                countBadge.innerText = "0";
-                totalEl.innerText = "\u20B90";
-                return;
-            }
-
-            list.innerHTML = cart.map(item => {
-                totalQty += item.qty;
-                totalPrice += item.price * item.qty;
-                return `
-                    <div class="cart-item">
-                        <div style="max-width: 220px;">
-                            <div style="font-weight:bold;">\${item.name}</div>
-                            <div style="color:#555; margin-top:4px;">\u20B9\${item.price.toLocaleString('en-IN')} &times; \${item.qty}</div>
-                        </div>
-                        <button onclick="removeFromCart('\${item.id}')" style="color:#b12704; background:none; border:none; cursor:pointer; font-size:12px;">Remove</button>
-                    </div>
-                `;
-            }).join("");
-
-            countBadge.innerText = totalQty;
-            totalEl.innerText = "\u20B9" + totalPrice.toLocaleString('en-IN');
-        }
-
-        function toggleCart() {
-            document.getElementById("cartDrawer").classList.toggle("open");
-        }
-
-        function buyNow(name, price) {
-            alert("Express Checkout:\nItem: " + name + "\nTotal Payable: \u20B9" + price.toLocaleString('en-IN'));
-        }
-
-        function checkout() {
-            if (cart.length === 0) {
-                alert("Your cart is empty!");
-                return;
-            }
-            alert("Order placed successfully! Thank you for shopping with ShopKart.");
-            cart = [];
-            renderCart();
-            toggleCart();
-        }
-    </script>
-</body>
-</html>
+            <input
