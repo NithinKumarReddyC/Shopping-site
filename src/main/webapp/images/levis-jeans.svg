@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="420" viewBox="0 0 600 420">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9333ea"/>
+      <stop offset="100%" stop-color="#7e22ce"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="420" rx="0" fill="url(#bg)"/>
+  <circle cx="300" cy="170" r="100" fill="rgba(255,255,255,0.10)"/>
+  <circle cx="300" cy="170" r="65" fill="rgba(255,255,255,0.07)"/>
+  <text x="300" y="195" text-anchor="middle" font-size="80">&#128086;</text>
+  <line x1="150" y1="295" x2="450" y2="295" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <text x="300" y="335" text-anchor="middle" font-size="22" fill="white" font-family="Segoe UI,Arial,sans-serif" font-weight="bold">Levi's 511 Slim Fit Jeans</text>
+  <text x="300" y="370" text-anchor="middle" font-size="13" fill="rgba(255,255,255,0.7)" font-family="Segoe UI,Arial,sans-serif">Slim Fit  &#8226;  Stretchable  &#8226;  Mid-rise</text>
+</svg>

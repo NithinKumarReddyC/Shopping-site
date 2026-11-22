@@ -1,23 +1,37 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <%
-    // FIX: Declare the list with both generic types.
     List<Map<String, String>> products = new ArrayList<>();
 
     // id, name, category, price, mrp, rating, reviews, badge, image, specs, emoji
     String[][] catalogData = {
-        {"101", "Apple iPhone 16 (128 GB) - Ultramarine", "Mobiles", "79900", "89900", "4.6", "14,230", "Free Delivery by Tomorrow", "https://placehold.co/600x420/f1f5f9/0f172a?text=iPhone+16", "128 GB • A18 chip • 48 MP camera • 6.1-inch display", "📱"},
-        {"102", "Samsung Galaxy S24 Ultra 5G (Titanium Gray, 256 GB)", "Mobiles", "119999", "134999", "4.7", "8,912", "Assured Delivery • No Cost EMI", "https://placehold.co/600x420/f1f5f9/0f172a?text=Galaxy+S24+Ultra", "256 GB • Snapdragon 8 Gen 3 • 200 MP camera • S Pen", "📱"},
-        {"103", "ASUS Vivobook 15, Intel Core i5-1335U", "Electronics", "54990", "69990", "4.3", "3,410", "No Cost EMI Available", "https://placehold.co/600x420/f1f5f9/0f172a?text=ASUS+Vivobook+15", "Core i5 • 16 GB RAM • 512 GB SSD • 15.6-inch display", "💻"},
-        {"104", "Sony WH-1000XM5 Wireless Noise Cancelling Headphones", "Electronics", "26990", "34990", "4.8", "6,105", "Best Seller", "https://placehold.co/600x420/f1f5f9/0f172a?text=Sony+WH-1000XM5", "Wireless • Active noise cancellation • 30-hour battery", "🎧"},
-        {"105", "Nike Revolution 7 Running Shoes for Men", "Fashion", "3295", "3695", "4.2", "1,890", "Free Delivery", "https://placehold.co/600x420/f1f5f9/0f172a?text=Nike+Shoes", "Road running • Lightweight • Cushioned sole", "👟"},
-        {"106", "Allen Solly Men's Regular Fit Cotton Polo T-Shirt", "Fashion", "699", "1199", "4.1", "22,450", "Top Deal", "https://placehold.co/600x420/f1f5f9/0f172a?text=Polo+T-Shirt", "Cotton blend • Regular fit • Casual wear", "👕"},
-        {"107", "Philips Digital Air Fryer HD9252/90", "Appliances", "7999", "11995", "4.5", "9,870", "1 Year Warranty", "https://placehold.co/600x420/f1f5f9/0f172a?text=Philips+Air+Fryer", "4.1 L capacity • Rapid Air technology • Digital controls", "🍟"},
-        {"108", "LG 260 L 3 Star Frost-Free Double Door Refrigerator", "Appliances", "24490", "31990", "4.4", "5,320", "Free Installation", "https://placehold.co/600x420/f1f5f9/0f172a?text=LG+Refrigerator", "260 L capacity • 3 Star rating • Frost-free • Double door", "🧊"}
-        ,{"109", "Wakefit 3-Seater Fabric Sofa", "Furniture", "24999", "34999", "4.4", "1,245", "Free Delivery • 3 Year Warranty", "https://placehold.co/600x420/f1f5f9/0f172a?text=3-Seater+Sofa", "3-seater • Fabric upholstery • Solid wood frame • Grey", "🛋️"}
-        ,{"110", "Queen Size Engineered Wood Bed with Storage", "Furniture", "18999", "27999", "4.2", "986", "Free Installation", "https://placehold.co/600x420/f1f5f9/0f172a?text=Queen+Bed", "Queen size • Hydraulic storage • Engineered wood • Walnut finish", "🛏️"}
-        ,{"111", "2-Door Wardrobe with Mirror", "Furniture", "12999", "19999", "4.1", "754", "Free Delivery", "https://placehold.co/600x420/f1f5f9/0f172a?text=2-Door+Wardrobe", "2 doors • Mirror • Hanging space • Engineered wood", "🚪"}
-        ,{"112", "Wooden Study Desk with Storage Shelves", "Furniture", "5499", "8499", "4.3", "1,108", "Easy Assembly", "https://placehold.co/600x420/f1f5f9/0f172a?text=Study+Desk", "Computer desk • Storage shelves • Engineered wood • Oak finish", "🪑"}
+        // ── Mobiles ──
+        {"101", "Apple iPhone 16 (128 GB) - Ultramarine", "Mobiles", "79900", "89900", "4.6", "14,230", "Free Delivery by Tomorrow", "images/iphone-16.svg", "128 GB • A18 chip • 48 MP camera • 6.1-inch display", "📱"},
+        {"102", "Samsung Galaxy S24 Ultra 5G (Titanium Gray, 256 GB)", "Mobiles", "119999", "134999", "4.7", "8,912", "Assured Delivery • No Cost EMI", "images/galaxy-s24-ultra.svg", "256 GB • Snapdragon 8 Gen 3 • 200 MP camera • S Pen", "📱"},
+        {"113", "Google Pixel 9 Pro (128 GB) - Obsidian", "Mobiles", "109999", "119999", "4.5", "3,580", "No Cost EMI • Free Delivery", "images/pixel-9-pro.svg", "128 GB • Tensor G4 • 50 MP camera • 6.3-inch display", "📱"},
+        {"114", "OnePlus 13 5G (256 GB) - Midnight Ocean", "Mobiles", "69999", "79999", "4.4", "5,210", "Exchange Offer Available", "images/oneplus-13.svg", "256 GB • Snapdragon 8 Elite • 50 MP camera • 6.82-inch display", "📱"},
+        // ── Electronics ──
+        {"103", "ASUS Vivobook 15, Intel Core i5-1335U", "Electronics", "54990", "69990", "4.3", "3,410", "No Cost EMI Available", "images/asus-vivobook.svg", "Core i5 • 16 GB RAM • 512 GB SSD • 15.6-inch display", "💻"},
+        {"104", "Sony WH-1000XM5 Wireless Noise Cancelling Headphones", "Electronics", "26990", "34990", "4.8", "6,105", "Best Seller", "images/sony-wh1000xm5.svg", "Wireless • Active noise cancellation • 30-hour battery", "🎧"},
+        {"115", "Apple MacBook Air M3 (8 GB/256 GB SSD)", "Electronics", "99990", "114900", "4.8", "2,870", "Student Offer • No Cost EMI", "images/macbook-air.svg", "M3 chip • 8 GB RAM • 256 GB SSD • 13.6-inch Liquid Retina", "💻"},
+        {"116", "Samsung Galaxy Tab S9 FE (128 GB) Wi-Fi", "Electronics", "30999", "44999", "4.4", "1,950", "Great Deal", "images/galaxy-tab.svg", "128 GB • Exynos 1380 • 10.9-inch • S Pen included", "📲"},
+        {"118", "boAt Rockerz 550 Bluetooth Headphones", "Electronics", "1799", "4490", "4.1", "45,320", "Top Rated", "images/boat-rockerz.svg", "Bluetooth 5.0 • 20-hour battery • 50mm drivers • Foldable", "🎧"},
+        {"122", "Noise ColorFit Pro 5 Max Smartwatch", "Electronics", "3499", "5999", "4.2", "12,780", "Trending Now", "images/smartwatch.svg", "1.96-inch AMOLED • Bluetooth calling • 100+ sports modes", "⌚"},
+        // ── Fashion ──
+        {"105", "Nike Revolution 7 Running Shoes for Men", "Fashion", "3295", "3695", "4.2", "1,890", "Free Delivery", "images/nike-shoes.svg", "Road running • Lightweight • Cushioned sole", "👟"},
+        {"106", "Allen Solly Men's Regular Fit Cotton Polo T-Shirt", "Fashion", "699", "1199", "4.1", "22,450", "Top Deal", "images/polo-tshirt.svg", "Cotton blend • Regular fit • Casual wear", "👕"},
+        {"117", "Levi's 511 Slim Fit Men's Jeans (Blue)", "Fashion", "1899", "3999", "4.3", "8,340", "52% OFF • Best Price", "images/levis-jeans.svg", "Slim fit • Stretchable • Mid-rise • Cotton blend", "👖"},
+        // ── Appliances ──
+        {"107", "Philips Digital Air Fryer HD9252/90", "Appliances", "7999", "11995", "4.5", "9,870", "1 Year Warranty", "images/air-fryer.svg", "4.1 L capacity • Rapid Air technology • Digital controls", "🍟"},
+        {"108", "LG 260 L 3 Star Frost-Free Double Door Refrigerator", "Appliances", "24490", "31990", "4.4", "5,320", "Free Installation", "images/lg-refrigerator.svg", "260 L capacity • 3 Star rating • Frost-free • Double door", "🧊"},
+        {"119", "Samsung 7 kg Fully-Automatic Front Load Washing Machine", "Appliances", "29990", "38990", "4.3", "3,780", "Free Installation • Exchange", "images/washing-machine.svg", "7 kg • Front load • Hygiene Steam • Digital Inverter", "🫧"},
+        {"120", "IFB 25 L Convection Microwave Oven", "Appliances", "12490", "16990", "4.5", "7,210", "Best Seller", "images/microwave.svg", "25 L • Convection • 300+ auto-cook menus • Starter kit", "♨️"},
+        // ── Furniture ──
+        {"109", "Wakefit 3-Seater Fabric Sofa", "Furniture", "24999", "34999", "4.4", "1,245", "Free Delivery • 3 Year Warranty", "images/sofa-3seater.svg", "3-seater • Fabric upholstery • Solid wood frame • Grey", "🛋️"},
+        {"110", "Queen Size Engineered Wood Bed with Storage", "Furniture", "18999", "27999", "4.2", "986", "Free Installation", "images/queen-bed.svg", "Queen size • Hydraulic storage • Engineered wood • Walnut finish", "🛏️"},
+        {"111", "2-Door Wardrobe with Mirror", "Furniture", "12999", "19999", "4.1", "754", "Free Delivery", "images/wardrobe.svg", "2 doors • Mirror • Hanging space • Engineered wood", "🚪"},
+        {"112", "Wooden Study Desk with Storage Shelves", "Furniture", "5499", "8499", "4.3", "1,108", "Easy Assembly", "images/study-desk.svg", "Computer desk • Storage shelves • Engineered wood • Oak finish", "🪑"},
+        {"121", "Green Soul Jupiter Ergonomic Office Chair", "Furniture", "13999", "22999", "4.5", "2,340", "Best Seller", "images/office-chair.svg", "Ergonomic • Adjustable lumbar • Mesh back • Armrests", "💺"}
     };
 
     for (String[] item : catalogData) {
@@ -46,76 +60,273 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ShopKart | Deals you'll love</title>
 <style>
-    :root { --navy:#101827; --navy2:#1d2b40; --gold:#ffca55; --orange:#ff8a3d; --ink:#172033; --muted:#64748b; --surface:#fff; --bg:#f3f6fb; --green:#16834a; }
-    * { box-sizing:border-box; margin:0; padding:0; font-family:Inter,Arial,Helvetica,sans-serif; }
-    body { background:var(--bg); color:var(--ink); }
-    button, input, select { font:inherit; }
-    .navbar { background:var(--navy); color:#fff; display:flex; align-items:center; gap:18px; padding:12px 4%; position:sticky; top:0; z-index:50; box-shadow:0 4px 18px #0b122033; }
-    .logo { color:#fff; text-decoration:none; font-size:26px; font-weight:900; letter-spacing:-1px; white-space:nowrap; }
-    .logo span { color:var(--gold); }
-    .location-box { font-size:11px; color:#cbd5e1; white-space:nowrap; }
-    .location-box strong { display:block; color:#fff; font-size:13px; margin-top:3px; }
-    .search-bar { display:flex; flex:1; min-width:180px; height:42px; border-radius:10px; overflow:hidden; background:#fff; }
-    .search-bar select { border:0; background:#e9eef5; padding:0 10px; color:#334155; max-width:115px; }
-    .search-bar input { flex:1; min-width:50px; border:0; outline:0; padding:0 14px; }
-    .search-bar button { border:0; padding:0 18px; background:var(--gold); color:#242424; font-weight:800; cursor:pointer; }
-    .nav-actions { display:flex; align-items:center; gap:16px; font-size:12px; white-space:nowrap; }
-    .nav-item strong { display:block; font-size:13px; color:#fff; }
-    .cart-btn { border:0; background:var(--navy2); color:#fff; padding:10px 13px; border-radius:9px; cursor:pointer; font-weight:800; }
-    .cart-count { display:inline-block; background:var(--gold); color:#111; border-radius:20px; padding:2px 7px; margin-left:4px; }
-    .subnav { display:flex; gap:8px; flex-wrap:wrap; padding:10px 4%; background:var(--navy2); }
-    .subnav button { border:0; color:#e2e8f0; background:transparent; padding:7px 13px; border-radius:20px; cursor:pointer; }
-    .subnav button:hover, .subnav button.active { background:var(--gold); color:#172033; font-weight:800; }
-    .hero { margin:22px auto 18px; width:92%; max-width:1440px; min-height:220px; padding:32px 5%; border-radius:22px; color:#fff; display:flex; justify-content:space-between; align-items:center; gap:25px; overflow:hidden; background:radial-gradient(circle at 85% 20%,#ffb45466,transparent 28%),linear-gradient(120deg,#174ea6,#17243c 65%,#301c49); box-shadow:0 14px 35px #17203320; }
-    .hero-tag { display:inline-block; background:var(--gold); color:#172033; padding:7px 12px; border-radius:30px; font-size:11px; font-weight:900; letter-spacing:1px; margin-bottom:13px; }
-    .hero h1 { font-size:clamp(27px,4vw,43px); line-height:1.08; max-width:680px; margin-bottom:12px; }
-    .hero p { color:#dbeafe; line-height:1.6; }
-    .hero-art { font-size:82px; filter:drop-shadow(0 12px 18px #0005); animation:float 3s ease-in-out infinite; }
-    @keyframes float { 0%,100%{transform:translateY(0) rotate(-4deg)} 50%{transform:translateY(-12px) rotate(4deg)} }
-    .trust-strip { width:92%; max-width:1440px; margin:0 auto 24px; display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
-    .trust-item { background:#fff; border:1px solid #e5eaf2; border-radius:12px; padding:13px; text-align:center; font-size:13px; color:#475569; }
-    .trust-item strong { display:block; color:var(--ink); margin-bottom:3px; }
-    .container { width:92%; max-width:1440px; margin:0 auto 50px; }
-    .section-header { display:flex; justify-content:space-between; align-items:end; gap:12px; margin-bottom:17px; }
-    .section-header h2 { font-size:25px; }
-    .section-header p { color:var(--muted); font-size:13px; margin-top:4px; }
-    #resultCount { color:var(--muted); font-size:13px; }
-    .product-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(245px,1fr)); gap:18px; }
-    .card { position:relative; background:var(--surface); border:1px solid #e7ebf2; border-radius:17px; padding:15px; display:flex; flex-direction:column; justify-content:space-between; min-height:440px; box-shadow:0 5px 18px #17203308; transition:transform .2s,box-shadow .2s; }
-    .card:hover { transform:translateY(-5px); box-shadow:0 14px 30px #17203316; }
-    .deal-label { position:absolute; top:12px; left:12px; z-index:1; background:#fff1e8; color:#c2410c; border-radius:20px; padding:5px 9px; font-size:10px; font-weight:900; }
-    .product-emoji { position:absolute; right:14px; top:12px; font-size:22px; }
-    .card img { width:100%; height:175px; object-fit:contain; margin:18px 0 12px; }
-    .card-category { color:#64748b; font-size:10px; font-weight:900; letter-spacing:1px; text-transform:uppercase; margin-bottom:7px; }
-    .card-title { font-size:15px; font-weight:800; line-height:1.4; min-height:42px; margin-bottom:8px; }
-    .specs { color:#64748b; font-size:11px; line-height:1.5; min-height:34px; margin-bottom:9px; }
-    .rating-row { display:flex; align-items:center; gap:7px; font-size:12px; color:#64748b; margin-bottom:10px; }
-    .rating-badge { background:var(--green); color:#fff; padding:4px 7px; border-radius:6px; font-weight:900; }
-    .price-row { margin-bottom:7px; display:flex; align-items:baseline; flex-wrap:wrap; gap:6px; }
-    .price { font-size:22px; font-weight:900; color:#111827; }
-    .mrp { font-size:12px; color:#94a3b8; text-decoration:line-through; }
-    .discount { font-size:12px; color:var(--green); font-weight:900; }
-    .saving { color:var(--green); font-size:11px; margin-bottom:9px; }
-    .delivery-badge { color:var(--green); font-size:11px; font-weight:800; margin-bottom:13px; }
-    .btn-group { display:flex; gap:8px; }
-    .btn-cart,.btn-buy { flex:1; border:0; border-radius:9px; padding:10px 7px; font-weight:900; font-size:12px; cursor:pointer; transition:filter .2s; }
-    .btn-cart { background:#fff0c2; color:#5b3b00; }
-    .btn-buy { background:var(--orange); color:#fff; }
-    .btn-cart:hover,.btn-buy:hover { filter:brightness(.95); }
-    .empty-state { display:none; grid-column:1/-1; padding:45px 20px; background:#fff; border-radius:15px; text-align:center; color:var(--muted); }
-    .cart-overlay { display:none; position:fixed; inset:0; background:#0f172a66; z-index:80; }
-    .cart-overlay.show { display:block; }
-    .cart-drawer { position:fixed; top:0; right:-420px; width:min(390px,100%); height:100vh; background:#fff; box-shadow:-8px 0 30px #0002; transition:right .25s; z-index:90; display:flex; flex-direction:column; }
-    .cart-drawer.open { right:0; }
-    .cart-header { background:var(--navy); color:#fff; padding:18px; display:flex; justify-content:space-between; align-items:center; }
-    .cart-header button { background:none; border:0; color:#fff; font-size:25px; cursor:pointer; }
-    .cart-items { flex:1; overflow-y:auto; padding:16px; }
-    .cart-item { display:flex; justify-content:space-between; gap:12px; border-bottom:1px solid #e5e7eb; padding:13px 0; font-size:13px; }
-    .cart-footer { padding:17px; border-top:1px solid #e5e7eb; background:#f8fafc; }
-    .checkout-btn { width:100%; margin-top:12px; border:0; background:var(--gold); padding:13px; font-weight:900; border-radius:9px; cursor:pointer; }
-    footer { background:var(--navy); color:#cbd5e1; text-align:center; padding:25px 15px; font-size:12px; line-height:1.8; }
-    @media(max-width:850px) { .navbar{flex-wrap:wrap}.search-bar{order:3;flex-basis:100%}.nav-actions{margin-left:auto}.location-box{display:none}.hero{padding:27px}.hero-art{font-size:58px} }
-    @media(max-width:520px) { .nav-actions .nav-item{display:none}.hero{align-items:flex-start}.hero-art{font-size:42px}.trust-strip{grid-template-columns:1fr}.section-header{align-items:flex-start;flex-direction:column}.product-grid{grid-template-columns:1fr 1fr;gap:10px}.card{padding:11px;min-height:420px}.card img{height:130px}.card-title{font-size:13px}.price{font-size:18px}.btn-group{flex-direction:column} }
+    /* ===== VARIABLES ===== */
+    :root {
+        --navy: #101827; --navy2: #1d2b40; --gold: #ffca55; --orange: #ff8a3d;
+        --ink: #172033; --muted: #64748b; --surface: #fff; --bg: #f3f6fb;
+        --green: #16834a; --radius: 16px; --shadow: 0 5px 18px #17203310;
+    }
+
+    /* ===== RESET ===== */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { background: var(--bg); color: var(--ink); font-family: 'Segoe UI', Inter, Arial, Helvetica, sans-serif; line-height: 1.5; }
+    button, input, select { font: inherit; }
+    img { max-width: 100%; height: auto; }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+        background: var(--navy); color: #fff; display: flex; align-items: center;
+        gap: 16px; padding: 12px 4%; position: sticky; top: 0; z-index: 50;
+        box-shadow: 0 4px 18px #0b122033;
+    }
+    .logo { color: #fff; text-decoration: none; font-size: 26px; font-weight: 900; letter-spacing: -1px; white-space: nowrap; flex-shrink: 0; }
+    .logo span { color: var(--gold); }
+    .location-box { font-size: 11px; color: #cbd5e1; white-space: nowrap; flex-shrink: 0; }
+    .location-box strong { display: block; color: #fff; font-size: 13px; margin-top: 3px; }
+    .search-bar { display: flex; flex: 1; min-width: 0; height: 42px; border-radius: 10px; overflow: hidden; background: #fff; }
+    .search-bar select { border: 0; background: #e9eef5; padding: 0 10px; color: #334155; max-width: 115px; cursor: pointer; }
+    .search-bar input { flex: 1; min-width: 0; border: 0; outline: 0; padding: 0 14px; font-size: 14px; }
+    .search-bar button { border: 0; padding: 0 16px; background: var(--gold); color: #242424; font-weight: 800; cursor: pointer; white-space: nowrap; transition: background .2s; }
+    .search-bar button:hover { background: #ffd97a; }
+    .nav-actions { display: flex; align-items: center; gap: 16px; font-size: 12px; white-space: nowrap; flex-shrink: 0; }
+    .nav-item { color: #cbd5e1; }
+    .nav-item strong { display: block; font-size: 13px; color: #fff; }
+    .cart-btn {
+        border: 0; background: var(--navy2); color: #fff; padding: 10px 14px;
+        border-radius: 9px; cursor: pointer; font-weight: 800; transition: background .2s;
+        display: flex; align-items: center; gap: 6px;
+    }
+    .cart-btn:hover { background: #2a3b55; }
+    .cart-count { display: inline-block; background: var(--gold); color: #111; border-radius: 20px; padding: 2px 7px; font-size: 11px; font-weight: 900; min-width: 22px; text-align: center; }
+
+    /* ===== SUB-NAV (Category Tabs) ===== */
+    .subnav { display: flex; gap: 6px; flex-wrap: wrap; padding: 10px 4%; background: var(--navy2); }
+    .subnav button {
+        border: 0; color: #e2e8f0; background: transparent; padding: 8px 16px;
+        border-radius: 20px; cursor: pointer; font-size: 13px; font-weight: 600;
+        transition: all .2s; white-space: nowrap;
+    }
+    .subnav button:hover { background: rgba(255,202,85,0.15); color: #fff; }
+    .subnav button.active { background: var(--gold); color: #172033; font-weight: 800; }
+
+    /* ===== HERO BANNER ===== */
+    .hero {
+        margin: 22px auto 20px; width: 92%; max-width: 1440px; min-height: 220px;
+        padding: 36px 5%; border-radius: var(--radius); color: #fff;
+        display: flex; justify-content: space-between; align-items: center; gap: 30px; overflow: hidden;
+        background: radial-gradient(circle at 85% 20%, #ffb45466, transparent 28%),
+                    linear-gradient(120deg, #174ea6, #17243c 65%, #301c49);
+        box-shadow: 0 14px 35px #17203320;
+    }
+    .hero-tag { display: inline-block; background: var(--gold); color: #172033; padding: 7px 14px; border-radius: 30px; font-size: 11px; font-weight: 900; letter-spacing: 1px; margin-bottom: 14px; }
+    .hero h1 { font-size: clamp(24px, 4vw, 43px); line-height: 1.1; max-width: 680px; margin-bottom: 14px; }
+    .hero p { color: #dbeafe; line-height: 1.6; max-width: 600px; }
+    .hero-features { margin-top: 14px; font-weight: 800; color: #ffdf91; font-size: 14px; }
+    .hero-art { font-size: 82px; filter: drop-shadow(0 12px 18px #0005); animation: float 3s ease-in-out infinite; flex-shrink: 0; }
+    @keyframes float { 0%,100%{ transform: translateY(0) rotate(-4deg) } 50%{ transform: translateY(-12px) rotate(4deg) } }
+
+    /* ===== TRUST STRIP ===== */
+    .trust-strip { width: 92%; max-width: 1440px; margin: 0 auto 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .trust-item {
+        background: #fff; border: 1px solid #e5eaf2; border-radius: 12px;
+        padding: 14px; text-align: center; font-size: 13px; color: #475569;
+        transition: transform .2s, box-shadow .2s;
+    }
+    .trust-item:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .trust-item strong { display: block; color: var(--ink); margin-bottom: 4px; }
+
+    /* ===== MAIN CONTAINER ===== */
+    .container { width: 92%; max-width: 1440px; margin: 0 auto 50px; }
+    .section-header { display: flex; justify-content: space-between; align-items: end; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+    .section-header h2 { font-size: 25px; }
+    .section-header p { color: var(--muted); font-size: 13px; margin-top: 4px; }
+    #resultCount { color: var(--muted); font-size: 13px; white-space: nowrap; }
+
+    /* ===== PRODUCT GRID ===== */
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 20px;
+    }
+
+    /* ===== PRODUCT CARD ===== */
+    .card {
+        position: relative; background: var(--surface); border: 1px solid #e7ebf2;
+        border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column;
+        justify-content: space-between; min-height: 460px;
+        box-shadow: var(--shadow); transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px #17203318; }
+    .deal-label {
+        position: absolute; top: 12px; left: 12px; z-index: 1;
+        background: #fff1e8; color: #c2410c; border-radius: 20px;
+        padding: 5px 10px; font-size: 10px; font-weight: 900; letter-spacing: 0.3px;
+    }
+    .product-emoji { position: absolute; right: 14px; top: 12px; font-size: 20px; }
+    .card-img-wrap {
+        width: 100%; height: 185px; border-radius: 10px; overflow: hidden;
+        margin-bottom: 12px; background: #f8fafc;
+    }
+    .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+    .card:hover .card-img-wrap img { transform: scale(1.04); }
+    .card-category { color: #64748b; font-size: 10px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+    .card-title { font-size: 14px; font-weight: 800; line-height: 1.4; min-height: 40px; margin-bottom: 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .specs { color: #64748b; font-size: 11px; line-height: 1.5; min-height: 32px; margin-bottom: 8px; }
+    .rating-row { display: flex; align-items: center; gap: 7px; font-size: 12px; color: #64748b; margin-bottom: 10px; }
+    .rating-badge { background: var(--green); color: #fff; padding: 3px 7px; border-radius: 6px; font-weight: 900; font-size: 11px; }
+    .price-row { margin-bottom: 6px; display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px; }
+    .price { font-size: 22px; font-weight: 900; color: #111827; }
+    .mrp { font-size: 12px; color: #94a3b8; text-decoration: line-through; }
+    .discount { font-size: 12px; color: var(--green); font-weight: 900; }
+    .saving { color: var(--green); font-size: 11px; margin-bottom: 8px; }
+    .delivery-badge { color: var(--green); font-size: 11px; font-weight: 800; margin-bottom: 12px; }
+    .btn-group { display: flex; gap: 8px; margin-top: auto; }
+    .btn-cart, .btn-buy {
+        flex: 1; border: 0; border-radius: 10px; padding: 11px 8px;
+        font-weight: 900; font-size: 12px; cursor: pointer;
+        transition: filter .2s, transform .15s; min-height: 44px;
+    }
+    .btn-cart { background: #fff0c2; color: #5b3b00; }
+    .btn-buy { background: var(--orange); color: #fff; }
+    .btn-cart:hover, .btn-buy:hover { filter: brightness(.93); }
+    .btn-cart:active, .btn-buy:active { transform: scale(0.97); }
+
+    /* ===== EMPTY STATE ===== */
+    .empty-state { display: none; grid-column: 1 / -1; padding: 50px 20px; background: #fff; border-radius: var(--radius); text-align: center; color: var(--muted); }
+
+    /* ===== CART OVERLAY & DRAWER ===== */
+    .cart-overlay { display: none; position: fixed; inset: 0; background: #0f172a66; z-index: 80; backdrop-filter: blur(2px); }
+    .cart-overlay.show { display: block; }
+    .cart-drawer {
+        position: fixed; top: 0; right: -420px; width: min(400px, 90vw); height: 100vh;
+        background: #fff; box-shadow: -8px 0 30px #0002; transition: right .3s ease;
+        z-index: 90; display: flex; flex-direction: column;
+    }
+    .cart-drawer.open { right: 0; }
+    .cart-header { background: var(--navy); color: #fff; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .cart-header h3 { font-size: 16px; }
+    .cart-header button { background: none; border: 0; color: #fff; font-size: 28px; cursor: pointer; line-height: 1; padding: 4px; }
+    .cart-items { flex: 1; overflow-y: auto; padding: 16px 20px; }
+    .cart-item { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; border-bottom: 1px solid #e5e7eb; padding: 14px 0; font-size: 13px; }
+    .cart-footer { padding: 18px 20px; border-top: 1px solid #e5e7eb; background: #f8fafc; }
+    .checkout-btn {
+        width: 100%; margin-top: 12px; border: 0; background: var(--gold);
+        padding: 14px; font-weight: 900; font-size: 14px; border-radius: 10px;
+        cursor: pointer; transition: background .2s; min-height: 48px;
+    }
+    .checkout-btn:hover { background: #ffd97a; }
+
+    /* ===== SCROLL TO TOP ===== */
+    .scroll-top {
+        position: fixed; bottom: 30px; right: 30px; width: 48px; height: 48px;
+        border-radius: 50%; border: 0; background: var(--navy); color: #fff;
+        font-size: 20px; cursor: pointer; z-index: 60; opacity: 0;
+        transform: translateY(20px); transition: opacity .3s, transform .3s;
+        box-shadow: 0 4px 15px #0003; display: flex; align-items: center; justify-content: center;
+    }
+    .scroll-top.visible { opacity: 1; transform: translateY(0); }
+    .scroll-top:hover { background: #2a3b55; }
+
+    /* ===== FOOTER ===== */
+    footer {
+        background: var(--navy); color: #cbd5e1; text-align: center;
+        padding: 30px 20px; font-size: 12px; line-height: 2;
+    }
+    footer strong { font-size: 16px; }
+    .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 10px 0; }
+    .footer-links a { color: #94a3b8; text-decoration: none; font-size: 12px; transition: color .2s; }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+    .card { animation: fadeInUp .5s ease both; }
+    .card:nth-child(2) { animation-delay: .05s; }
+    .card:nth-child(3) { animation-delay: .1s; }
+    .card:nth-child(4) { animation-delay: .15s; }
+    .card:nth-child(5) { animation-delay: .2s; }
+
+    /* ===== RESPONSIVE: LARGE TABLET / SMALL DESKTOP ===== */
+    @media (max-width: 1100px) {
+        .product-grid { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
+    }
+
+    /* ===== RESPONSIVE: TABLET ===== */
+    @media (max-width: 850px) {
+        .navbar { flex-wrap: wrap; gap: 10px; padding: 10px 3%; }
+        .search-bar { order: 3; flex-basis: 100%; }
+        .nav-actions { margin-left: auto; }
+        .location-box { display: none; }
+        .hero { padding: 28px 5%; min-height: 180px; }
+        .hero h1 { font-size: 26px; }
+        .hero-art { font-size: 60px; }
+        .trust-strip { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+        .trust-item { padding: 10px; font-size: 12px; }
+    }
+
+    /* ===== RESPONSIVE: LARGE PHONE ===== */
+    @media (max-width: 650px) {
+        .navbar { padding: 10px 3%; gap: 8px; }
+        .logo { font-size: 22px; }
+        .nav-actions .nav-item { display: none; }
+        .hero { flex-direction: column; text-align: center; padding: 24px 5%; gap: 15px; }
+        .hero-art { font-size: 50px; }
+        .hero-features { font-size: 12px; }
+        .trust-strip { grid-template-columns: 1fr; gap: 8px; }
+        .section-header { flex-direction: column; align-items: flex-start; }
+        .product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .card { padding: 12px; min-height: 400px; border-radius: 12px; }
+        .card-img-wrap { height: 150px; border-radius: 8px; }
+        .card-title { font-size: 13px; min-height: 36px; }
+        .price { font-size: 18px; }
+        .specs { font-size: 10px; min-height: 28px; }
+        .btn-group { gap: 6px; }
+        .btn-cart, .btn-buy { padding: 9px 6px; font-size: 11px; min-height: 40px; }
+        .subnav { padding: 8px 3%; gap: 5px; }
+        .subnav button { padding: 6px 12px; font-size: 12px; }
+        footer { padding: 25px 15px; }
+        .scroll-top { bottom: 20px; right: 20px; width: 42px; height: 42px; }
+    }
+
+    /* ===== RESPONSIVE: SMALL PHONE ===== */
+    @media (max-width: 400px) {
+        .navbar { padding: 8px 3%; }
+        .logo { font-size: 20px; }
+        .search-bar { height: 38px; }
+        .search-bar select { max-width: 80px; font-size: 12px; padding: 0 6px; }
+        .search-bar input { padding: 0 10px; font-size: 13px; }
+        .search-bar button { padding: 0 10px; font-size: 12px; }
+        .cart-btn { padding: 8px 10px; font-size: 12px; }
+        .hero { padding: 20px 4%; min-height: auto; }
+        .hero h1 { font-size: 22px; }
+        .hero p { font-size: 13px; }
+        .hero-art { font-size: 40px; }
+        .product-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+        .card { padding: 10px; min-height: 370px; }
+        .card-img-wrap { height: 120px; }
+        .card-title { font-size: 12px; min-height: 32px; }
+        .card-category { font-size: 9px; }
+        .price { font-size: 16px; }
+        .mrp, .discount { font-size: 10px; }
+        .saving { font-size: 10px; }
+        .delivery-badge { font-size: 10px; }
+        .rating-row { font-size: 10px; }
+        .rating-badge { font-size: 10px; padding: 2px 5px; }
+        .deal-label { font-size: 8px; padding: 3px 7px; top: 8px; left: 8px; }
+        .product-emoji { font-size: 16px; top: 8px; right: 10px; }
+        .btn-group { flex-direction: column; gap: 5px; }
+        .btn-cart, .btn-buy { padding: 10px 6px; font-size: 11px; border-radius: 8px; }
+        .section-header h2 { font-size: 20px; }
+        .subnav { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; padding-bottom: 6px; }
+        .subnav button { flex-shrink: 0; }
+    }
+
+    /* ===== RESPONSIVE: VERY SMALL ===== */
+    @media (max-width: 340px) {
+        .product-grid { grid-template-columns: 1fr; }
+        .card { min-height: auto; }
+        .card-img-wrap { height: 160px; }
+    }
 </style>
 </head>
 <body>
@@ -147,15 +358,15 @@
         <span class="hero-tag">⚡ BIG SAVING DAYS</span>
         <h1>Good products.<br>Better prices.</h1>
         <p>Discover trending tech, everyday essentials, stylish furniture and deals worth adding to cart.</p>
-        <p style="margin-top:12px;font-weight:800;color:#ffdf91;">💳 No Cost EMI &nbsp; • &nbsp; 🚚 Delivery offers &nbsp; • &nbsp; 🔒 Secure demo checkout</p>
+        <p class="hero-features">💳 No Cost EMI &nbsp; • &nbsp; 🚚 Free Delivery &nbsp; • &nbsp; 🔒 Secure Checkout &nbsp; • &nbsp; 🔄 Easy Returns</p>
     </div>
     <div class="hero-art" aria-hidden="true">🛍️</div>
 </section>
 
 <section class="trust-strip">
-    <div class="trust-item"><strong>🚚 Delivery updates</strong>Delivery information shown on each product</div>
-    <div class="trust-item"><strong>💳 Easy payments</strong>Demo pricing and EMI highlights</div>
-    <div class="trust-item"><strong>⭐ Customer ratings</strong>Ratings and review counts in product cards</div>
+    <div class="trust-item"><strong>🚚 Fast Delivery</strong>Delivery info shown on every product</div>
+    <div class="trust-item"><strong>💳 Easy Payments</strong>No Cost EMI &amp; multiple payment options</div>
+    <div class="trust-item"><strong>⭐ Trusted Reviews</strong>Real ratings &amp; reviews from verified buyers</div>
 </section>
 
 <main class="container">
@@ -174,7 +385,9 @@
             <div class="deal-label"><%= p.get("badge") %></div>
             <span class="product-emoji"><%= p.get("emoji") %></span>
             <div>
-                <img src="<%= p.get("img") %>" alt="<%= p.get("name") %>" loading="lazy">
+                <div class="card-img-wrap">
+                    <img src="<%= p.get("img") %>" alt="<%= p.get("name") %>" loading="lazy">
+                </div>
                 <div class="card-category"><%= p.get("category") %></div>
                 <div class="card-title"><%= p.get("name") %></div>
                 <div class="specs">⚙️ <%= p.get("specs") %></div>
@@ -189,11 +402,11 @@
             </div>
             <div class="btn-group">
                 <button class="btn-cart" type="button" onclick="addToCart('<%= p.get("id") %>', this)">🛒 Add to Cart</button>
-                <button class="btn-buy" type="button" onclick="buyNow('<%= p.get("name").replace("'", "\\'") %>', <%= price %>)">Buy Now ⚡</button>
+                <button class="btn-buy" type="button" onclick="buyNow('<%= p.get("name").replace("\\", "\\\\").replace("'", "\\'") %>', <%= price %>)">Buy Now ⚡</button>
             </div>
         </article>
         <% } %>
-        <div class="empty-state" id="emptyState"><div style="font-size:35px">🔎</div><strong>No products found</strong><p>Try another product name or category.</p></div>
+        <div class="empty-state" id="emptyState"><div style="font-size:40px;margin-bottom:10px">🔎</div><strong style="font-size:16px">No products found</strong><p style="margin-top:6px">Try a different search term or category.</p></div>
     </div>
 </main>
 
@@ -204,15 +417,21 @@
     <div class="cart-footer">
         <div style="display:flex;justify-content:space-between;font-weight:900;font-size:16px;"><span>Subtotal</span><span id="cartTotal">₹0</span></div>
         <button class="checkout-btn" type="button" onclick="checkout()">Proceed to Checkout →</button>
-        <p style="font-size:10px;color:#64748b;margin-top:8px;">Demo storefront only. No real payment or order is processed.</p>
+        <p style="font-size:10px;color:#64748b;margin-top:8px;text-align:center;">Demo storefront only. No real payment or order is processed.</p>
     </div>
 </aside>
 
+<button class="scroll-top" id="scrollTop" type="button" onclick="window.scrollTo({top:0})" aria-label="Scroll to top">↑</button>
+
 <footer>
     <strong>ShopKart ✦</strong><br>
+    <div class="footer-links">
+        <a href="#">About</a><a href="#">Contact</a><a href="#">Careers</a>
+        <a href="#">Help Center</a><a href="#">Privacy Policy</a><a href="#">Terms</a>
+    </div>
     Demo e-commerce storefront built with JSP, Java, HTML, CSS and JavaScript.<br>
     Server: <%= application.getServerInfo() %> &nbsp; | &nbsp; Page generated: <%= serverTimestamp %><br>
-    © 2026 ShopKart. Product details and prices are sample data.
+    &copy; 2026 ShopKart. Product details and prices are sample data.
 </footer>
 
 <script>
@@ -231,12 +450,15 @@
         const cards = document.querySelectorAll(".product-card");
         let visible = 0;
 
-        cards.forEach(card => {
+        cards.forEach((card, i) => {
             const categoryMatch = category === "All" || card.dataset.category === category;
             const nameMatch = card.dataset.name.includes(query);
             const show = categoryMatch && nameMatch;
             card.style.display = show ? "flex" : "none";
-            if (show) visible++;
+            if (show) {
+                card.style.animationDelay = (visible * 0.04) + "s";
+                visible++;
+            }
         });
 
         document.getElementById("sectionTitle").textContent =
@@ -261,7 +483,13 @@
 
         renderCart();
         button.textContent = "✓ Added";
-        window.setTimeout(() => button.textContent = "🛒 Add to Cart", 900);
+        button.style.background = "#d1fae5";
+        button.style.color = "#065f46";
+        window.setTimeout(() => {
+            button.textContent = "🛒 Add to Cart";
+            button.style.background = "";
+            button.style.color = "";
+        }, 1000);
     }
 
     function removeFromCart(id) {
@@ -287,8 +515,9 @@
 
         list.innerHTML = cart.map(item =>
             '<div class="cart-item"><div><strong>' + escapeHtml(item.name) + '</strong><div style="color:#64748b;margin-top:5px;">₹' +
-            item.price.toLocaleString("en-IN") + ' × ' + item.qty + '</div></div><button type="button" onclick="removeFromCart(\'' +
-            item.id + '\')" style="border:0;background:none;color:#dc2626;cursor:pointer;">Remove</button></div>'
+            item.price.toLocaleString("en-IN") + ' &times; ' + item.qty + ' = <strong>₹' +
+            (item.price * item.qty).toLocaleString("en-IN") + '</strong></div></div><button type="button" onclick="removeFromCart(\'' +
+            item.id + '\')" style="border:0;background:#fee2e2;color:#dc2626;cursor:pointer;border-radius:6px;padding:4px 10px;font-size:12px;font-weight:700;white-space:nowrap;align-self:center;">Remove</button></div>'
         ).join("");
     }
 
@@ -301,6 +530,7 @@
     function toggleCart() {
         document.getElementById("cartDrawer").classList.toggle("open");
         document.getElementById("cartOverlay").classList.toggle("show");
+        document.body.style.overflow = document.getElementById("cartDrawer").classList.contains("open") ? "hidden" : "";
     }
 
     function buyNow(name, price) {
@@ -321,7 +551,11 @@
         renderCart();
         toggleCart();
     }
+
+    // Scroll to top button visibility
+    window.addEventListener("scroll", function() {
+        document.getElementById("scrollTop").classList.toggle("visible", window.scrollY > 400);
+    });
 </script>
 </body>
 </html>
-
