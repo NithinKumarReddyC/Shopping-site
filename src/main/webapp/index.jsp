@@ -31,7 +31,16 @@
         {"110", "Queen Size Engineered Wood Bed with Storage", "Furniture", "18999", "27999", "4.2", "986", "Free Installation", "images/queen-bed.svg", "Queen size • Hydraulic storage • Engineered wood • Walnut finish", "🛏️"},
         {"111", "2-Door Wardrobe with Mirror", "Furniture", "12999", "19999", "4.1", "754", "Free Delivery", "images/wardrobe.svg", "2 doors • Mirror • Hanging space • Engineered wood", "🚪"},
         {"112", "Wooden Study Desk with Storage Shelves", "Furniture", "5499", "8499", "4.3", "1,108", "Easy Assembly", "images/study-desk.svg", "Computer desk • Storage shelves • Engineered wood • Oak finish", "🪑"},
-        {"121", "Green Soul Jupiter Ergonomic Office Chair", "Furniture", "13999", "22999", "4.5", "2,340", "Best Seller", "images/office-chair.svg", "Ergonomic • Adjustable lumbar • Mesh back • Armrests", "💺"}
+        {"121", "Green Soul Jupiter Ergonomic Office Chair", "Furniture", "13999", "22999", "4.5", "2,340", "Best Seller", "images/office-chair.svg", "Ergonomic • Adjustable lumbar • Mesh back • Armrests", "💺"},
+        // ── Grocery ──
+        {"130", "India Gate Basmati Rice Feast Rozzana (5 kg)", "Grocery", "429", "599", "4.6", "29,800", "Free Delivery • Top Deal", "images/rice.gif", "5 kg bag • Aged fragrant long grain • 100% Pure Basmati", "🍚"},
+        {"131", "Amul Gold Fresh Whole Milk (1 L Pack)", "Grocery", "68", "74", "4.7", "41,200", "Daily Morning Essential", "images/milk.gif", "1 Litre pack • Full cream 6% fat • Pasteurized & Homogenized", "🥛"},
+        {"132", "Farm Fresh Organic Brown Eggs (Pack of 12)", "Grocery", "119", "150", "4.7", "18,400", "High Protein • Farm Fresh", "images/eggs.gif", "12 pcs • Free-range antibiotic-free eggs • Naturally nutritious", "🥚"},
+        {"133", "Harvest Gold 100% Atta Whole Wheat Bread (400g)", "Grocery", "45", "50", "4.4", "12,600", "Freshly Baked Today", "images/bread.gif", "400 g loaf • 0% Maida • Zero trans fat • Soft & healthy", "🍞"},
+        {"134", "Fortune Sunlite Refined Sunflower Oil (1 L Pouch)", "Grocery", "135", "175", "4.5", "23,100", "Great Indian Grocery Deal", "images/sunflower-oil.gif", "1 Litre pouch • Rich in Vitamin E • Low absorb technology", "🌻"},
+        {"135", "Aashirvaad Superior MP Sharbati Atta (10 kg)", "Grocery", "445", "515", "4.8", "62,400", "100% Whole Wheat • Best Seller", "images/atta.gif", "10 kg bag • 0% Maida • Rich dietary fibre • Extra soft rotis", "🌾"},
+        {"136", "Tata Tea Gold Care Premium Tea (500 g)", "Grocery", "310", "390", "4.6", "17,800", "With 5 Natural Ingredients", "images/tea.gif", "500 g pouch • Tulsi, Ginger, Cardamom, Mulethi & Brahmi", "☕"},
+        {"137", "Cadbury Dairy Milk Silk Chocolate Bar (150 g)", "Grocery", "165", "185", "4.8", "45,900", "Sweet Treat • Top Rated", "images/chocolate.gif", "150 g bar • Premium creamy & smooth milk chocolate", "🍫"}
     };
 
     for (String[] item : catalogData) {
@@ -50,7 +59,7 @@
         products.add(p);
     }
 
-    String[] categories = {"All", "Mobiles", "Electronics", "Fashion", "Appliances", "Furniture"};
+    String[] categories = {"All", "Mobiles", "Electronics", "Fashion", "Appliances", "Furniture", "Grocery"};
     String serverTimestamp = new java.text.SimpleDateFormat("dd MMM yyyy, hh:mm a").format(new Date());
 %>
 <!DOCTYPE html>
