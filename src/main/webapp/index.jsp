@@ -53,7 +53,66 @@
         {"209", "Veyi Padagalu - Viswanatha Satyanarayana (Telugu)", "Books", "399", "550", "4.8", "6,800", "Jnanpith Award Telugu Novel", "images/book-veyi-padagalu.gif", "Telugu • Classic Literature • 1100+ pages • Epic Novel", "📗"},
         {"210", "Barrister Parvateesam - Mokkapati (Telugu Comedy)", "Books", "175", "250", "4.5", "15,200", "Funniest Telugu Novel", "images/book-barrister.gif", "Telugu • Comedy Fiction • 280 pages • Humorous Classic", "😂"},
         {"211", "Godan - Munshi Premchand (Hindi Classic)", "Books", "185", "275", "4.7", "42,300", "Hindi Sahitya Classic", "images/book-godan.gif", "Hindi • Classic Literature • 312 pages • Premchand Masterpiece", "📖"},
-        {"212", "Jurassic Park - Michael Crichton (English, Adventure)", "Books", "425", "599", "4.6", "56,700", "Sci-Fi Adventure Thriller", "images/book-jurassic-park.gif", "English • Sci-Fi Adventure • 448 pages • Ballantine Books", "🦖"}
+        {"212", "Jurassic Park - Michael Crichton (English, Adventure)", "Books", "425", "599", "4.6", "56,700", "Sci-Fi Adventure Thriller", "images/book-jurassic-park.gif", "English • Sci-Fi Adventure • 448 pages • Ballantine Books", "🦖"},
+        // ── Sports & Fitness ──
+        {"301", "Yonex Astrox 88D Pro Badminton Racket", "Sports", "9499", "12999", "4.7", "3,420", "Top Player Choice", "images/badminton-racket.svg", "Graphite • 85g • 30 lbs tension • Steep attack style", "🏸"},
+        {"302", "Nivia Storm Football (Size 5)", "Sports", "499", "799", "4.3", "8,750", "AIFF Approved", "images/football.svg", "Size 5 • 32-panel stitched • Durable rubber bladder", "⚽"},
+        {"303", "Cosco Primo Cricket Kit (Youth)", "Sports", "2999", "4499", "4.2", "2,180", "Full Kit • Great Value", "images/cricket-kit.svg", "Bat + pads + gloves + helmet + bag • Junior size", "🏏"},
+        {"304", "Boldfit Gym Gloves with Wrist Support", "Sports", "399", "799", "4.4", "21,600", "Best Seller • Gym Essentials", "images/gym-gloves.svg", "Anti-slip grip • Breathable mesh • Adjustable strap", "🧤"},
+        {"305", "Decathlon Domyos 20 kg Dumbbell Set (Adjustable)", "Sports", "3499", "5499", "4.5", "6,340", "Home Gym Must-Have", "images/dumbbell.svg", "Cast iron plates • 20 kg set • Chrome bar • Collar lock", "🏋️"},
+        {"306", "Nivia Encounter Lawn Tennis Racket", "Sports", "1299", "1999", "4.1", "5,870", "Beginner Friendly", "images/tennis-racket.svg", "Aluminium frame • 27 inch • 68-71 lbs string tension", "🎾"},
+        {"307", "Adidas Predator 23 Club Football Boots", "Sports", "2499", "3999", "4.3", "4,520", "Free Delivery", "images/football-boots.svg", "Firm ground • Laceless • 3-stripes • EU 42", "👟"},
+        // ── Beauty & Personal Care ──
+        {"401", "Lakme 9to5 Primer + Matte Lipstick - Red Coat", "Beauty", "340", "449", "4.4", "31,200", "Best Seller Shade", "images/lipstick.svg", "12-hour stay • Primer infused • Matte finish • Red Coat", "💄"},
+        {"402", "Neutrogena Deep Clean Brightening Foaming Scrub (100g)", "Beauty", "349", "499", "4.3", "19,800", "Dermatologist Tested", "images/face-scrub.svg", "Glycolic acid • Brightening • For all skin types • 100 g", "✨"},
+        {"403", "Mamaearth Onion Hair Oil for Hair Fall Control (250 ml)", "Beauty", "349", "499", "4.4", "54,300", "No Sulphate • No Paraben", "images/hair-oil.svg", "Onion + Redensyl • Reduces hair fall • 250 ml", "🧴"},
+        {"404", "Gillette Mach3 Turbo Manual Shaving Razor (3 Blades)", "Beauty", "199", "299", "4.6", "43,100", "Top Grooming Pick", "images/razor.svg", "Lubrastrip • Triple blade • Anti-friction coating", "🪒"},
+        {"405", "Biotique Bio Morning Nectarine Face Wash (200 ml)", "Beauty", "169", "249", "4.2", "27,500", "100% Natural Ingredients", "images/face-wash.svg", "Ayurvedic • Oil-free • 200 ml • For normal to dry skin", "🌿"},
+        {"406", "Plum Grape Seed & Sea Buckthorn Sunscreen SPF 50 (50 g)", "Beauty", "425", "575", "4.5", "14,900", "Lightweight • No White Cast", "images/sunscreen.svg", "SPF 50 PA++++ • Grape seed • Vegan • 50 g", "☀️"},
+        {"407", "SUGAR Cosmetics Matte Attack Lipstick - Berry Me", "Beauty", "549", "699", "4.5", "22,400", "Trending Shade", "images/sugar-lipstick.svg", "5-hour wear • Matte • Moisturising • Berry shade", "💋"},
+        // ── Toys & Games ──
+        {"501", "LEGO Classic Creative Bricks Box (790 Pieces)", "Toys", "2499", "3499", "4.8", "7,840", "Award Winning Toy", "images/lego.svg", "790 pcs • Ages 4+ • Multiple builds • Creative play", "🧱"},
+        {"502", "Hot Wheels Ultimate Garage Playset (3 Floors)", "Toys", "3499", "5999", "4.6", "5,120", "Cars Included", "images/hot-wheels.svg", "3-floor garage • Fits 35+ cars • Spiral ramp • Ages 3+", "🚗"},
+        {"503", "Funskool Monopoly Classic Board Game", "Toys", "799", "1199", "4.5", "14,300", "Family Game Night Essential", "images/monopoly.svg", "2-6 players • Ages 8+ • Classic board game • 60+ min play", "🎲"},
+        {"504", "Rubik's Cube 3x3 Original Speed Cube", "Toys", "349", "499", "4.4", "28,700", "Brain Teaser Classic", "images/rubiks-cube.svg", "3x3 • Smooth turning • Competition grade • Stickered", "🧩"},
+        {"505", "Remote Control Car - 1:16 Scale Off-Road Buggy", "Toys", "1299", "2499", "4.3", "9,610", "High Speed 25 kmph", "images/rc-car.svg", "1:16 scale • 4WD • 2.4 GHz • Rechargeable • 25 km/h", "🚙"},
+        {"506", "Nerf N-Strike Elite Disruptor Blaster (Blue)", "Toys", "699", "999", "4.4", "17,200", "High Impact Fun", "images/nerf-gun.svg", "6-dart rotating drum • 27m range • Slam fire • Ages 8+", "🔫"},
+        // ── Kitchen & Dining ──
+        {"601", "Prestige Svachh PPCCC4 Aluminium Pressure Cooker (5L)", "Kitchen", "1899", "2799", "4.5", "32,400", "1 Year Warranty", "images/pressure-cooker.svg", "5 Litre • Aluminium • Spillage control lid • Induction safe", "🍲"},
+        {"602", "Milton Thermosteel Flip Lid Flask (1 Litre)", "Kitchen", "799", "1299", "4.6", "61,800", "Keeps Hot 24 hr", "images/thermos-flask.svg", "1 L • Stainless steel • Keeps hot 24 hr • Leak-proof lid", "☕"},
+        {"603", "Borosil Vision Glass Set of 6 (305 ml each)", "Kitchen", "649", "999", "4.4", "24,500", "Microwave Safe", "images/glass-set.svg", "305 ml • Borosilicate • Dishwasher safe • Pack of 6", "🥤"},
+        {"604", "Pigeon Favourite Gas Stove 2 Burner (Black)", "Kitchen", "1899", "2999", "4.3", "18,700", "BIS Certified", "images/gas-stove.svg", "2 burner • Toughened glass top • Manual ignition • ISI mark", "🔥"},
+        {"605", "Prestige PPDPRC1.8 Rice Cooker (1.8 Litre)", "Kitchen", "1299", "1999", "4.4", "14,900", "Auto Cook & Warm", "images/rice-cooker.svg", "1.8 L • Auto cook & warm • 700W • Non-stick bowl", "🍚"},
+        {"606", "Hawkins Futura Non-Stick Frying Pan (26 cm)", "Kitchen", "1099", "1799", "4.5", "21,300", "Best Seller Non-Stick", "images/frying-pan.svg", "26 cm • PFOA-free non-stick • Hard anodised • Induction base", "🍳"},
+        {"607", "Cello World 4-Piece Casserole Set (1 L each)", "Kitchen", "699", "1199", "4.3", "12,100", "Microwave & Freezer Safe", "images/casserole-set.svg", "4 pcs • 1 L each • Borosilicate glass • Airtight lids", "🥘"},
+        // ── Health & Wellness ──
+        {"701", "Omron HEM-7120 Automatic Blood Pressure Monitor", "Health", "1849", "2799", "4.6", "28,900", "Clinically Validated", "images/bp-monitor.svg", "Upper arm • One-touch • 60-reading memory • Irregular heartbeat", "❤️"},
+        {"702", "Accu-Chek Active Blood Glucose Meter + 10 Strips", "Health", "699", "1099", "4.5", "19,400", "Trusted by Doctors", "images/glucometer.svg", "No coding • 10 test strips included • Fast 5 sec result", "💉"},
+        {"703", "Morepen Nebulizer Machine NB-50 (Compressor Type)", "Health", "1399", "2199", "4.4", "11,200", "Hospital Grade Mist", "images/nebulizer.svg", "Compressor • 0.5 ml/min flow • Piston pump • For adults & kids", "😷"},
+        {"704", "Healthkart HK Vitals Fish Oil 1000 mg (60 Capsules)", "Health", "499", "699", "4.5", "36,800", "Omega-3 Supplement", "images/fish-oil.svg", "1000 mg • 180 mg EPA • 120 mg DHA • 60 softgels", "💊"},
+        {"705", "Dr. Morepen Pulse Oximeter PO-14 (Fingertip)", "Health", "849", "1399", "4.5", "43,200", "Accurate SpO2 & PR", "images/oximeter.svg", "Fingertip • SpO2 & pulse rate • Large LED display • Batteries incl.", "🩺"},
+        // ── Stationery & Office ──
+        {"801", "Parker Beta Premium Ball Pen (Pack of 20)", "Stationery", "399", "599", "4.5", "52,100", "Office Best Seller", "images/ballpen.svg", "0.7mm tip • Smooth writing • Blue ink • 20 piece set", "🖊️"},
+        {"802", "Classmate 1 Subject Long Notebook (Pack of 6)", "Stationery", "189", "299", "4.3", "78,400", "School Essential", "images/notebook.svg", "192 pages • Single line ruled • Long size • 6-pack", "📓"},
+        {"803", "Stapler HD-10 Kangaro Heavy Duty (Full Strip)", "Stationery", "349", "499", "4.4", "31,200", "No 10 Staples Compatible", "images/stapler.svg", "No. 10 • 20-sheet capacity • Full strip • Jam-free mechanism", "📎"},
+        {"804", "Camlin Kokuyo Art Kit (60-Piece)", "Stationery", "699", "999", "4.6", "14,800", "Complete Art Set", "images/art-kit.svg", "60 pcs • Oil pastels + watercolors + brushes + pencils", "🎨"},
+        {"805", "Faber-Castell Grip Colour Pencil Set (36 Colours)", "Stationery", "549", "799", "4.7", "23,600", "Vibrant & Long Lasting", "images/colour-pencils.svg", "36 shades • Triangular grip • Soft core • Break-resistant", "✏️"},
+        // ── Pet Supplies ──
+        {"901", "Pedigree Adult Dry Dog Food Chicken & Veg (3 kg)", "Pets", "799", "1099", "4.6", "19,400", "Vet Recommended", "images/dog-food.svg", "3 kg • Chicken & vegetables • 100% complete nutrition • Adult dogs", "🐶"},
+        {"902", "Whiskas Adult Dry Cat Food Tuna Flavour (1.2 kg)", "Pets", "499", "699", "4.5", "14,200", "Cats Love It", "images/cat-food.svg", "1.2 kg • Ocean fish & tuna • Omega 3 & 6 • For adult cats", "🐱"},
+        {"903", "PetSafe Stainless Steel Pet Bowls (Set of 2)", "Pets", "349", "599", "4.4", "8,750", "Non-Toxic & Durable", "images/pet-bowls.svg", "2 bowls • 400 ml each • Stainless steel • Non-slip base", "🍽️"},
+        // ── Travel & Luggage ──
+        {"1001", "Skybags Trooper 55 cm Cabin Trolley Bag (Blue)", "Travel", "2999", "5999", "4.5", "12,400", "Lightweight 2.2 kg", "images/trolley-bag.svg", "55 cm • 4 wheels • TSA lock • Polycarbonate shell • 42 L", "🧳"},
+        {"1002", "Wildcraft Trailblazer Rucksack 55 L (Green)", "Travel", "2499", "3999", "4.4", "7,830", "Trekking Essential", "images/rucksack.svg", "55 L • Rain cover • Multiple compartments • Ergonomic straps", "🎒"},
+        {"1003", "Safari Bags TRIO 65 cm Hardsided Trolley (Red)", "Travel", "3499", "6999", "4.3", "5,920", "50% OFF • Flash Deal", "images/safari-bag.svg", "65 cm • 8 spinner wheels • TSA lock • Polypropylene shell", "🧳"},
+        // ── Automotive ──
+        {"1101", "Bosch Car Battery Charger (12V / 6A)", "Automotive", "2499", "3999", "4.5", "6,210", "Fully Automatic", "images/car-charger.svg", "12V • 6A • Fully automatic • Recovers deeply discharged batteries", "🔋"},
+        {"1102", "3M Microfiber Car Cleaning Cloth (Pack of 3)", "Automotive", "449", "699", "4.4", "31,500", "Scratch-Free Cleaning", "images/car-cloth.svg", "40x40 cm • 380 GSM • Pack of 3 • Interior & exterior safe", "🚗"},
+        {"1103", "Michelin Tyre Inflator with LCD Display (12V)", "Automotive", "1299", "2199", "4.5", "14,800", "Portable & Accurate", "images/tyre-inflator.svg", "12V DC • LCD display • Auto shut-off • 100 PSI max", "🏎️"},
+        // ── Musical Instruments ──
+        {"1201", "Fender CD-60S Acoustic Guitar (Natural)", "Music", "13999", "19999", "4.7", "4,320", "Best Beginner Guitar", "images/acoustic-guitar.svg", "Solid spruce top • Mahogany back • Dreadnought • Includes bag", "🎸"},
+        {"1202", "Casio SA-78 Musical Keyboard (44 Keys)", "Music", "2799", "3999", "4.5", "9,610", "Perfect for Beginners", "images/keyboard.svg", "44 mini keys • 100 tones • 50 rhythms • LCD display • Adapter incl.", "🎹"},
+        {"1203", "Yamaha FS100A Soprano Recorder (Blue)", "Music", "349", "599", "4.3", "12,840", "School Band Choice", "images/recorder-flute.svg", "ABS plastic • German fingering • Mouthpiece • Carry bag incl.", "🎵"}
     };
 
     for (String[] item : catalogData) {
@@ -72,7 +131,7 @@
         products.add(p);
     }
 
-    String[] categories = {"All", "Mobiles", "Electronics", "Fashion", "Appliances", "Furniture", "Grocery", "Books"};
+    String[] categories = {"All", "Mobiles", "Electronics", "Fashion", "Appliances", "Furniture", "Grocery", "Books", "Sports", "Beauty", "Toys", "Kitchen", "Health", "Stationery", "Pets", "Travel", "Automotive", "Music"};
     String serverTimestamp = new java.text.SimpleDateFormat("dd MMM yyyy, hh:mm a").format(new Date());
 %>
 <!DOCTYPE html>
