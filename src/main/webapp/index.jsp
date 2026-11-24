@@ -40,7 +40,20 @@
         {"134", "Fortune Sunlite Refined Sunflower Oil (1 L Pouch)", "Grocery", "135", "175", "4.5", "23,100", "Great Indian Grocery Deal", "images/sunflower-oil.gif", "1 Litre pouch • Rich in Vitamin E • Low absorb technology", "🌻"},
         {"135", "Aashirvaad Superior MP Sharbati Atta (10 kg)", "Grocery", "445", "515", "4.8", "62,400", "100% Whole Wheat • Best Seller", "images/atta.gif", "10 kg bag • 0% Maida • Rich dietary fibre • Extra soft rotis", "🌾"},
         {"136", "Tata Tea Gold Care Premium Tea (500 g)", "Grocery", "310", "390", "4.6", "17,800", "With 5 Natural Ingredients", "images/tea.gif", "500 g pouch • Tulsi, Ginger, Cardamom, Mulethi & Brahmi", "☕"},
-        {"137", "Cadbury Dairy Milk Silk Chocolate Bar (150 g)", "Grocery", "165", "185", "4.8", "45,900", "Sweet Treat • Top Rated", "images/chocolate.gif", "150 g bar • Premium creamy & smooth milk chocolate", "🍫"}
+        {"137", "Cadbury Dairy Milk Silk Chocolate Bar (150 g)", "Grocery", "165", "185", "4.8", "45,900", "Sweet Treat • Top Rated", "images/chocolate.gif", "150 g bar • Premium creamy & smooth milk chocolate", "🍫"},
+        // ── Books ──
+        {"201", "The Alchemist - Paulo Coelho (English)", "Books", "299", "350", "4.7", "1,25,400", "Best Seller • Inspiring", "images/book-alchemist.gif", "English • Fiction • 197 pages • HarperCollins", "📖"},
+        {"202", "Atomic Habits - James Clear (English)", "Books", "499", "699", "4.8", "98,200", "No.1 Self-Help Book", "images/book-atomic-habits.gif", "English • Self-Help • 320 pages • Penguin Random House", "📗"},
+        {"203", "Gone Girl - Gillian Flynn (English, Thriller)", "Books", "349", "499", "4.5", "67,800", "Psychological Thriller", "images/book-gone-girl.gif", "English • Psycho-Thriller • 432 pages • Crown Publishing", "📕"},
+        {"204", "Into the Wild - Jon Krakauer (English, Adventure)", "Books", "275", "399", "4.6", "45,100", "True Adventure Story", "images/book-into-the-wild.gif", "English • Adventure • 224 pages • Pan Macmillan", "🏔️"},
+        {"205", "The Girl on the Train - Paula Hawkins (Thriller)", "Books", "315", "450", "4.4", "72,500", "Gripping Psychological Thriller", "images/book-girl-on-train.gif", "English • Psycho-Thriller • 336 pages • Transworld Publishers", "🚂"},
+        {"206", "Malgudi Days - R.K. Narayan (English, Indian Classic)", "Books", "199", "299", "4.6", "34,600", "Classic Indian Literature", "images/book-malgudi-days.gif", "English • Fiction • 256 pages • Indian Writing in English", "📚"},
+        {"207", "Kannada Prabha - Kuvempu (Kannada Novel)", "Books", "250", "350", "4.5", "8,900", "Jnanpith Award Winner", "images/book-kannada-prabha.gif", "Kannada • Literature • 320 pages • Rashtrakavi Kuvempu", "📙"},
+        {"208", "Mookajjiya Kanasugalu - K. Shivaram Karanth (Kannada)", "Books", "225", "325", "4.7", "12,400", "Kannada Classic • Must Read", "images/book-mookajjiya.gif", "Kannada • Fiction • 288 pages • Jnanpith Awardee Author", "📘"},
+        {"209", "Veyi Padagalu - Viswanatha Satyanarayana (Telugu)", "Books", "399", "550", "4.8", "6,800", "Jnanpith Award Telugu Novel", "images/book-veyi-padagalu.gif", "Telugu • Classic Literature • 1100+ pages • Epic Novel", "📗"},
+        {"210", "Barrister Parvateesam - Mokkapati (Telugu Comedy)", "Books", "175", "250", "4.5", "15,200", "Funniest Telugu Novel", "images/book-barrister.gif", "Telugu • Comedy Fiction • 280 pages • Humorous Classic", "😂"},
+        {"211", "Godan - Munshi Premchand (Hindi Classic)", "Books", "185", "275", "4.7", "42,300", "Hindi Sahitya Classic", "images/book-godan.gif", "Hindi • Classic Literature • 312 pages • Premchand Masterpiece", "📖"},
+        {"212", "Jurassic Park - Michael Crichton (English, Adventure)", "Books", "425", "599", "4.6", "56,700", "Sci-Fi Adventure Thriller", "images/book-jurassic-park.gif", "English • Sci-Fi Adventure • 448 pages • Ballantine Books", "🦖"}
     };
 
     for (String[] item : catalogData) {
@@ -59,7 +72,7 @@
         products.add(p);
     }
 
-    String[] categories = {"All", "Mobiles", "Electronics", "Fashion", "Appliances", "Furniture", "Grocery"};
+    String[] categories = {"All", "Mobiles", "Electronics", "Fashion", "Appliances", "Furniture", "Grocery", "Books"};
     String serverTimestamp = new java.text.SimpleDateFormat("dd MMM yyyy, hh:mm a").format(new Date());
 %>
 <!DOCTYPE html>
