@@ -10,6 +10,8 @@
         {"102", "Samsung Galaxy S24 Ultra 5G (Titanium Gray, 256 GB)", "Mobiles", "119999", "134999", "4.7", "8,912", "Assured Delivery • No Cost EMI", "images/galaxy-s24-ultra.svg", "256 GB • Snapdragon 8 Gen 3 • 200 MP camera • S Pen", "📱"},
         {"113", "Google Pixel 9 Pro (128 GB) - Obsidian", "Mobiles", "109999", "119999", "4.5", "3,580", "No Cost EMI • Free Delivery", "images/pixel-9-pro.svg", "128 GB • Tensor G4 • 50 MP camera • 6.3-inch display", "📱"},
         {"114", "OnePlus 13 5G (256 GB) - Midnight Ocean", "Mobiles", "69999", "79999", "4.4", "5,210", "Exchange Offer Available", "images/oneplus-13.svg", "256 GB • Snapdragon 8 Elite • 50 MP camera • 6.82-inch display", "📱"},
+        {"154", "OnePlus Nord 4 5G (256 GB) - Mercurial Silver", "Mobiles", "29999", "35999", "4.4", "7,840", "No Cost EMI • Free Delivery", "images/oneplus-nord4.svg", "256 GB • Snapdragon 7+ Gen 3 • 50 MP Sony camera • 6.74-inch AMOLED 120Hz • 100W SUPERVOOC", "📱"},
+        {"155", "OnePlus 12R 5G (128 GB) - Iron Gray", "Mobiles", "39999", "44999", "4.5", "11,320", "Best Value Flagship", "images/oneplus-12r.svg", "128 GB • Snapdragon 8 Gen 2 • 50 MP OIS camera • 6.78-inch LTPO AMOLED • 100W charging", "📱"},
         // ── Electronics ──
         {"103", "ASUS Vivobook 15, Intel Core i5-1335U", "Electronics", "54990", "69990", "4.3", "3,410", "No Cost EMI Available", "images/asus-vivobook.svg", "Core i5 • 16 GB RAM • 512 GB SSD • 15.6-inch display", "💻"},
         {"104", "Sony WH-1000XM5 Wireless Noise Cancelling Headphones", "Electronics", "26990", "34990", "4.8", "6,105", "Best Seller", "images/sony-wh1000xm5.svg", "Wireless • Active noise cancellation • 30-hour battery", "🎧"},
