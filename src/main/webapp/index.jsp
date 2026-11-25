@@ -27,6 +27,20 @@
         {"138", "Kindle Paperwhite (16 GB) Signature Edition", "Electronics", "16999", "21999", "4.7", "8,920", "300 PPI • Wireless Charging", "images/kindle.svg", "16 GB • 300 PPI • 10 weeks battery • Adjustable warm light • IPX8", "📚"},
         {"139", "Anker 737 Power Bank 24000 mAh (140W)", "Electronics", "6999", "9999", "4.6", "14,300", "Charge Laptop + 2 Phones", "images/powerbank.svg", "24000 mAh • 140W PD • Bi-directional • 3 ports • Smart display", "🔋"},
         {"140", "Zebronics Zeb-Delight 100 Portable Projector (1080p)", "Electronics", "14999", "21999", "4.3", "5,670", "Home Theatre Experience", "images/projector.svg", "1080p • 200 ANSI lumens • HDMI + USB • Built-in speaker • 50-inch screen", "📽️"},
+        // ── Apple ──
+        {"141", "Apple iPhone 15 Pro Max (256 GB) - Black Titanium", "Apple", "159900", "174900", "4.8", "21,340", "Titanium Design • No Cost EMI", "images/apple-iphone15promax.svg", "256 GB • A17 Pro chip • 48 MP ProRAW camera • Action Button • USB-C", "📱"},
+        {"142", "Apple MacBook Pro 14-inch M3 Pro (18 GB / 512 GB)", "Apple", "199900", "224900", "4.9", "5,640", "Pro Performance Beast", "images/apple-macbook-pro14.svg", "M3 Pro • 18 GB RAM • 512 GB SSD • 14.2-inch Liquid Retina XDR • 22hr battery", "💻"},
+        {"143", "Apple iPad Pro 12.9-inch M2 (256 GB) Wi-Fi - Space Grey", "Apple", "109900", "129900", "4.8", "7,820", "Best iPad Ever Made", "images/apple-ipad-pro.svg", "M2 chip • 256 GB • 12.9-inch Liquid Retina XDR • ProMotion 120Hz • Centre Stage", "📱"},
+        {"144", "Apple iPad Air 11-inch M2 (128 GB) Wi-Fi - Blue", "Apple", "74900", "84900", "4.7", "9,430", "No Cost EMI Available", "images/apple-ipad-air.svg", "M2 chip • 128 GB • 11-inch Liquid Retina • 12 MP Wide camera • USB-C", "📲"},
+        {"145", "Apple Watch Series 10 (46 mm) GPS - Jet Black", "Apple", "46900", "52900", "4.8", "14,250", "Thinnest Apple Watch Ever", "images/apple-watch-s10.svg", "46 mm • LTPO OLED • Blood oxygen • ECG • Crash detection • 36hr battery", "⌚"},
+        {"146", "Apple Watch Ultra 2 (49 mm) - Black Titanium", "Apple", "89900", "99900", "4.9", "4,120", "Extreme Adventure Watch", "images/apple-watch-ultra2.svg", "49 mm • Micro-LED • Action Button • 72hr battery • Depth & dive app", "⌚"},
+        {"147", "Apple Mac Mini M4 (16 GB / 256 GB SSD)", "Apple", "59900", "69900", "4.8", "6,870", "Smallest Mac Ever", "images/apple-mac-mini.svg", "M4 chip • 16 GB RAM • 256 GB SSD • Thunderbolt 4 • Wi-Fi 6E • 3x faster CPU", "🖥️"},
+        {"148", "Apple iMac 24-inch M4 (16 GB / 512 GB) - Blue", "Apple", "149900", "169900", "4.9", "3,210", "All-in-One Powerhouse", "images/apple-imac.svg", "M4 chip • 24-inch 4.5K Retina • 16 GB RAM • 512 GB SSD • 12 MP camera", "🖥️"},
+        {"149", "Apple AirPods Max (USB-C) - Midnight", "Apple", "59900", "64900", "4.7", "8,430", "Premium Over-Ear ANC", "images/apple-airpods-max.svg", "H1 chip • Active Noise Cancellation • Transparency • 20hr battery • Lossless audio", "🎧"},
+        {"150", "Apple HomePod (2nd Gen) - Midnight", "Apple", "32900", "37900", "4.6", "5,960", "Spatial Audio Smart Speaker", "images/apple-homepod.svg", "S9 chip • Spatial Audio • Siri • Thread router • Room sensing • Temperature sensor", "🔊"},
+        {"151", "Apple TV 4K (3rd Gen) Wi-Fi + Ethernet", "Apple", "19900", "22900", "4.7", "7,340", "Best Streaming Device", "images/apple-tv.svg", "A15 Bionic • 4K HDR • Dolby Vision • Dolby Atmos • Siri Remote • Thread", "📺"},
+        {"152", "Apple Pencil Pro (2nd Gen) for iPad Pro & Air", "Apple", "11900", "13900", "4.8", "12,100", "Perfect for Creatives", "images/apple-pencil-pro.svg", "Squeeze gesture • Find My • Hover • Barrel Roll • Magnetic charge • Apple Pencil hover", "✏️"},
+        {"153", "Apple MagSafe Battery Pack (5000 mAh)", "Apple", "9900", "12900", "4.5", "9,650", "Wireless Charging On-the-Go", "images/apple-magsafe-battery.svg", "5000 mAh • MagSafe • 7.5W wireless • USB-C passthrough • iPhone 12 & later", "🔋"},
         // ── Fashion ──
         {"105", "Nike Revolution 7 Running Shoes for Men", "Fashion", "3295", "3695", "4.2", "1,890", "Free Delivery", "images/nike-shoes.svg", "Road running • Lightweight • Cushioned sole", "👟"},
         {"106", "Allen Solly Men's Regular Fit Cotton Polo T-Shirt", "Fashion", "699", "1199", "4.1", "22,450", "Top Deal", "images/polo-tshirt.svg", "Cotton blend • Regular fit • Casual wear", "👕"},
@@ -141,7 +155,7 @@
         products.add(p);
     }
 
-    String[] categories = {"All", "Mobiles", "Electronics", "Fashion", "Appliances", "Furniture", "Grocery", "Books", "Sports", "Beauty", "Toys", "Kitchen", "Health", "Stationery", "Pets", "Travel", "Automotive", "Music"};
+    String[] categories = {"All", "Mobiles", "Electronics", "Apple", "Fashion", "Appliances", "Furniture", "Grocery", "Books", "Sports", "Beauty", "Toys", "Kitchen", "Health", "Stationery", "Pets", "Travel", "Automotive", "Music"};
     String serverTimestamp = new java.text.SimpleDateFormat("dd MMM yyyy, hh:mm a").format(new Date());
 %>
 <!DOCTYPE html>
